@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<head>
+    <title>Show More/Less Card</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            padding: 20px;
+        }
+
+        .card-title {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .extra-content {
+            display: none;
+        }
+
+        .toggle-link {
+            color: lightskyblue;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 class="card-title">Explore my Service</h2>
+        <p class="card-content">
+            <p class="card-content">
+                ---About Mathan---
+                <br>
+                Education <br>
+                1. Currently in the final year of an Information Technology program. <br>
+                2. Strong academic background:
+                - CGPA: 8.0  
+                - HSC Marks: 82.5%  
+                - SSLC Marks: 69.2% <br>
+                ---Professional Journey---- <br>
+                3. Recently completed an internship in full-stack web development at NXT Logic Solutions. <br>
+                4. Actively transitioning from frontend to mastering full-stack web development. <br>
+                ---Skill Set--- <br>
+                5. Proficient in foundational web technologies: <br>
+                - HTML: Skilled in structuring and creating web pages. <br>
+                - CSS: Experienced in styling and designing attractive user interfaces. <br>
+                - Java: Strong understanding of object-oriented programming concepts. <br>
+                <span class="extra-content">
+                6. Learning and practicing advanced technologies: <br>
+                - MERN Stack: Actively exploring MongoDB, Express.js, React.js, and Node.js for full-stack development. <br>
+                ---Hobbies--- <br>
+                7. Daily Coding Practice: <br>
+                - Regularly practices coding to sharpen problem-solving skills. <br>
+                - Focuses on solving algorithms and building projects to improve logic. <br>
+                8. Personal Growth: <br>
+                - Committed to lifelong learning in technology. <br>
+                - Explores new tools, frameworks, and trends in software development. <br>
+                ---Strengths--- <br>
+                9. Quick Learner: <br>
+                - Quickly adapts to new technologies and tools. <br>
+                10. Consistency: <br>
+                - Consistently practices and improves skills, demonstrating discipline. <br>
+                ---Career Aspirations--- <br>
+                11. Aspires to become a skilled full-stack developer, specializing in modern web technologies. <br>
+                12. Plans to build impactful applications that solve real-world problems. <br>
+                ---Personality Highlights--- <br>
+                13. Passionate about creating and innovating through technology. <br>
+                14. Enjoys challenges and sees every coding task as an opportunity to grow. <br>
+                </span>
+            </p>
+            </span>
+        </p>
+        <a href="#" class="toggle-link" id="togglelink">Show More About Me.</a>
+    </div>
+    <script>
+        const togglelink = document.getElementById('togglelink');
+        const extracontent = document.querySelector('.extra-content');
+        togglelink.addEventListener('click', (e) => {
+            e.preventDefault();
+
+const ishidden = extracontent.style.display === 'none' || !extracontent.style.display;
+
+            if (ishidden) {
+                extracontent.style.display = 'inline';
+                togglelink.textContent = 'Show Less';
+            } else {
+                extracontent.style.display = 'none';
+                togglelink.textContent = 'Show More About Me.';
+            }
+        });
+    </script>
+</body>
+</html>
